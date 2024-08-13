@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // To print how many vowels in a string
+
+      var a = "Hello World";
+      count = 0;
+      for (i = 0; i < a.length; i++) {
+        if (
+          a[i] == "a" ||
+          a[i] == "e" ||
+          a[i] == "i" ||
+          a[i] == "o" ||
+          a[i] == "u"
+        ) {
+          count++;
+        }
+      }
+      console.log(count);
+
+      //    How to remove spaces without using trim.
+      var a = "   ANGRY BIRD   ";
+      var b = a.trimStart();
+
+      console.log(b);
+      console.log(a.length);
+      console.log(b.length);
+
+      /*Another method
+       function trimLeftSpace(str) {
+           return str.trimStart();
+         }
+        console.log('"' + trimLeftSpace(str) + '"');*/
+
+    // For a given string a = "chai_ayt_ni_ay" convert underscore into capital
+
+      let name = "chai_ayt_ni_ay";
+      let result = name.replace(/_([a-z])/g, (_, letter) =>
+        letter.toUpperCase()
+      );
+
+      console.log(result);
+
+      //   Without using slice cut the string using for loop
+
+      let str = "He_ll_o Wo_r_ld";
+      let start = 2; 
+      let end = 5; 
+      let resultStr = "";
+
+      for (let i = start; i < end; i++) {
+        resultStr += str[i];
+      }
+      console.log(resultStr);
+    </script>
+  </body>
+</html>
